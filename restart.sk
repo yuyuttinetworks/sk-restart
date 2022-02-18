@@ -1,19 +1,16 @@
 every a seconds:
     set {_now} to now formatted as "HH:mm:ss"
     if {_now} is "04:00:00":
-        loop all players:
-            send title "&e60秒後にサーバーは自動再起動します" to loop-player
+        send title "&e60秒後にサーバーは自動再起動します" to all players
         wait 50 seconds
         set {_countdown} to 10
-        loop all players:
-            loop 10 times:
-                send title "&cサーバー再起動まで残り&e%{_countdown}%&c秒" to loop-player
-                wait 1 seconds
-                set {_countdown} to {_countdown} - 1
-        loop all players:
-            send title "&eサーバーを再起動します" to loop-player
+        loop 10 times:
+            send title "&cサーバー再起動まで残り&e%{_countdown}%&c秒" to all players
+            wait 1 seconds
+            remove 1 from {_countdown}
+        send title "&eサーバーを再起動します" to all players
         wait 1 seconds
-        execute console command "stop"
+        stop the server
 
 command /now:
     trigger:
@@ -23,16 +20,13 @@ command /now:
 command /yuyurestart:
     permission:op
     trigger:
-        loop all players:
-            send title "&e60秒後にサーバーは自動再起動します" to loop-player
+        send title "&e60秒後にサーバーは自動再起動します" to all players
         wait 50 seconds
         set {_countdown} to 10
-        loop all players:
-            loop 10 times:
-                send title "&cサーバー再起動まで残り&e%{_countdown}%&c秒" to loop-player
-                wait 1 seconds
-                set {_countdown} to {_countdown} - 1
-        loop all players:
-            send title "&eサーバーを再起動します" to loop-player
+        loop 10 times:
+            send title "&cサーバー再起動まで残り&e%{_countdown}%&c秒" to all players
+            wait 1 seconds
+            remove 1 from {_countdown}
+        send title "&eサーバーを再起動します" to all players
         wait 1 seconds
-        execute console command "stop"
+        stop the server
