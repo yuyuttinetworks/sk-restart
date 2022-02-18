@@ -21,6 +21,7 @@ command /now:
         send "%{_now}%"
 
 command /yuyurestart:
+    permission:op
     trigger:
         loop all players:
             send title "&e60秒後にサーバーは自動再起動します" to loop-player
