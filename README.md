@@ -25,7 +25,6 @@ goto :loop
 ![image](https://user-images.githubusercontent.com/81958272/154697237-5d286caf-b83c-472c-8587-5da06f9af0e8.png)
 
 ## コマンド
-/now : 現在の時間を表示します。<br>
 /yuyurestart : 60秒後にサーバーをリスタートします。
 
 
