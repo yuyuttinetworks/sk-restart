@@ -12,11 +12,6 @@ every a seconds:
         wait 1 seconds
         stop the server
 
-command /now:
-    trigger:
-        set {_now} to now formatted as "HH:mm:ss"
-        send "%{_now}%"
-
 command /yuyurestart:
     permission:op
     trigger:
